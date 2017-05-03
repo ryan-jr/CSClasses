@@ -9,6 +9,18 @@ package assignment2;
  *
  * @author rjr
  */
-public class Tetra {
+public class Trex extends Dino{
     
+    int arms;
+    int claws;
+    
+    Trex() {
+        
+        arms = 2;
+        claws = 10;
+    }
+    public void wave() {
+        
+        System.out.println("Waves at you with tiny arms");
+    }
 }

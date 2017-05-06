@@ -759,4 +759,4 @@ public final List suits = Collections.unmodifiableList(Arrays.asList(suit(s)Name
 
 * In the above, the original collection can still be used/changed, but the unmodifiable wrapper is still good
 
-*****STOPPED AT 39:26 Lecture 8A***
+*****STOPPED AT 39:26 Lecture 8A***    

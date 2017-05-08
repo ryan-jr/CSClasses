@@ -4,6 +4,8 @@
 
 ### http://web.archive.org/web/20121124115311/http://www.bhecker.com:80/itu/viewforum.php?f=2
 
+### https://www.youtube.com/watch?v=HMUkS0sJr70&list=PL07BAEC9E3E9E49F3
+
 
 #### Lecture 1: General Class overview (nothing you need)
 
@@ -759,4 +761,123 @@ public final List suits = Collections.unmodifiableList(Arrays.asList(suit(s)Name
 
 * In the above, the original collection can still be used/changed, but the unmodifiable wrapper is still good
 
-*****STOPPED AT 39:26 Lecture 8A***    
+
+* Abstract implementations
+
+* The collection f/w provides abstract implementations to design developer created implmentations of relevant collection interfaces to satisfy whatever may come up , this may be better for overwriting a whole thing.  It may be also better for something like a phone which has more limited resources, and only using a limited set of things means a smaller memory footprint
+
+* Legacy collection types 
+
+
+* Old -- comporable to
+
+
+* Include enumerators -- iterator
+
+* Vector -- Arraylist
+
+* Stack -- subclass of Vector
+
+* Dictoionary -- Map
+
+* Hashtable -- Hashmap
+
+* Properties -- subclass of Hashtable
+
+
+***
+
+
+* (Lecture 8A) (PPT 7: Exceptions/IO)
+
+* Overivew of the hierarchy
+
+* Exceptions extend Throwable, Throwable branches out into Error and Exception
+
+* Error is an internal error/resoursce exhaustion inside Java.
+
+* Exception splits into IO exception and Runtime exception
+
+* Error checking is basicaly everything a user does, an Exception is everything a program does (for the most part)
+
+
+
+* Exception focus
+
+* Exceptions that drvie from runtimeException (bad cast, out of array access)
+
+* The above happens because errors exsist in the program and are the programmers fault
+
+* Exceptions not in the RuntimeExceptioin
+
+* Issues such as a malformed URL, the program is fine, but other bad things happen, e.g. not your fault
+
+* Checked vs. Unchecked exceptions
+
+* Unchecked expcetions: (Exceptions derived from the Error class, or RuntimeException)
+
+* Checked exceptions (All other exceptions that are not unchecked expcetions)  If these occur they must be dealt with in some way, and the compiler will check wether you provide exception handlers for checked exceptions that might occur.  
+
+* Declaring to throw checked exceptions
+
+* A java method or constructor should be declared to throw exceptions under two situations: A.  It calls another method that throws a checked exception or 2.  It throws a checked exception with the throw statement inside the body
+
+* Declare a method/constructor th throw an exception(s) by using the throws clause in its header
+
+```
+
+public FileInputStream(String s) throws FileNotFoundException, IOException, EOFException
+
+```
+
+* You should not declare an unchecked exception after throws, they are either outside of your control or should be avoided completely by correcting your code.  
+
+* Using throw to throw an exception
+
+* Throw an exception ounder bad situations(E.g a file is too long/too short)
+
+```
+
+// Two ways to declare
+
+throw(new EOFException());
+
+EOFException e = new EOFException();
+throw e;
+
+```
+
+* THe type of error thrown has to match that declared in the method header (either type or subtype)
+
+* If you can find an appropriate exception class in the library you can use it, if not you can create your own exception type
+
+* Creating new exception types
+
+* Exceptions are objects.  New exception types hsould extend Exception or one of its subclasses
+
+* We ceate new exception types because they can provide more detail and because they can provide information programmers on what actions to take/how to resolve the issue
+
+* Catching exceptions
+
+* Checked exceptions handingling is strictly enforced.  If you invoke a method that lists a checked exption in its throws clause there are 3 choices: A.  Catche and handle the excetpion.  B.  Declare the exception in the throws clause and let the exception pass through the method(where you might have a finally caluse to clean up things first).  C.  Catch the excetpion and map it into one of the excpetions by throwing an exception of  a type delcared in your own throws clause
+
+
+
+* Try/Catch clause
+
+```
+
+try {
+	
+	// Statements
+} catch (exceptionType1 identifier1) {
+	
+	// Handler for type1
+} catch (exceptionType1 identifier 2) {
+	
+	//handler for type2
+} ...
+
+```
+
+* Midterm is takehome, but answers should be straightforward (2-3 sentences)

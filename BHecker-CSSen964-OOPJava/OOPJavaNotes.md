@@ -880,4 +880,68 @@ try {
 
 ```
 
+* If no exception occurs during the execution of the statments in the try clause, the above would finish sucesfully and the catch clauses are skipped.  
+
+* If any of the code in the try block throws an exception either directly via a throw or indirectly by a method invoked in it: A.  The program skips the remaining code in the try block B.  The catch clauses are examined one by one to see if the type of thrown exception is compatabile with the type declared in the catc.  C.  If an appropriate catch is found, the code inside the body of that catch gets exectued and all the remaining catch clauses are skipped.  D.  If no acceptable catch is found the exception is thrown to an outer try that might have a catch clause to handle it.  
+
+* A catch clause with a superclass ExcetpionType cannot preceede a catch clause with a subclass exceptionType
+
+
 * Midterm is takehome, but answers should be straightforward (2-3 sentences)
+
+
+***
+
+### Lecture 9 (PPT 8): User interface components with Swing
+
+* Swing Overview
+
+* Classes from javax.swing defines Gui components including JLable, JTextField,JcheckBox,JComboBox,JList,Jpanel, etc...
+
+* These components are written in Java so they have greater portability/flexibility than the original GUI package/components from Java.awt which is platform depenedent
+
+* Keep in mind some swing components are platform depenedent such as JFrame.  
+
+* Common superclasses are Object -> awt.Component - > awt.Container -> Javax.swing.Jcomponent
+
+* Component class, the operations common to most GUI components are found in the Component class
+
+* Two important methods originate in the Container class of Add (add components to a container), setLayou enables a program to specify the layout manager that helps a Container position/size its components
+
+* Jlabel
+
+* A Jlable object provides text instruction/information to a GUI and displays a linee of Read only text, an image or both text/image
+
+* If you do not add a GUI component to a container, the GUI will not be displayed when the container appears on the screen.  
+
+* To make an interactive GUI program
+
+* There must be components (buttons, windows, menus, etc...), Events (Mouse click, window close, etc...), Event listeners (Interfaces), event handlers (methods etc...)/listeners
+
+* Event handling model
+
+* Some GUIs are event driven (e.g they generate events when the user interacts with the GUI mouse moving, clicking, typing, selecting an item etc...) Many of these events are defined in java.awt.event and javax.swing.event
+
+* THree diff parts to the even handling mechanism: A. Source: The GUI component which the user inetracts.  B.  Event object: Encapsulated info about the occured event.  C.  Event listener: An object which is notified by the event source when an even occurs and provides responses to the event.  
+
+* The programmer must perform 2 tasks to process a GUI event.  A.  Register an event listener which is an object of a class that implements one or more of the event listener interfaces from packages B.  Implement an event handling method
+
+* Jtext field and JPasswordField are single line areas in which text can be intered by the user from the keyboard or text can be displayed
+
+* When the user types data into them and presses enter an action even occurs.  If the program registers an event listener, the listener processes the event and can use the data in the text field at the time of the event in the program
+
+* Buttons
+
+* A button is a component the user clicks to trigger a specific action
+
+* There are several types of buttons in Java which are all subclasses of AbstractButtion
+
+* Command buttons generates actions, toggles have on/off values, check buttons generates ItemEvents, etc...
+
+* Layout managment
+
+* ALl components in a container are positionted by a layout manger.  BUttons are generally managed by the flow layout manger, which is the default layout manager for a panel
+
+* THe default manager lines componets horizonatally unil there is no more room and then starts  new row of components, after resizing the container the layout manager reflows the components automatically.  The default is to center the components in each row.  You can choose alining to the left/right of the container
+
+* Layout manger Using panel

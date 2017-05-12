@@ -945,3 +945,33 @@ try {
 * THe default manager lines componets horizonatally unil there is no more room and then starts  new row of components, after resizing the container the layout manager reflows the components automatically.  The default is to center the components in each row.  You can choose alining to the left/right of the container
 
 * Layout manger Using panel
+
+* Potential problems include streched buttons for using broder layout, the solution is to use panels which acts as a container for interface elements and can be arranged inside a larger panel which uses flow layout
+
+* To do this, create a panel, add components to the panel, and then add the panel to a larger container
+
+```
+
+JPanel p = new Jpanel();
+
+p.add(button1);
+p.add(button2);
+p.add(button3);
+frame.add(panel, BorderLayout.SOUTH);
+
+```
+
+
+
+***
+
+### Lecture 10 video 
+
+* Going over assignment 4: Create a text editor with a menu bar with File(Open, save As, exit) and Style 
+
+* Everything with a J is Swing, everything that does not have J is AWT
+
+* Garbage collection automatically looks at memory refs, sees what's not being used, and frees up the resource(s).  Garbage collection runs on an intermittent but regular basis, when it needs too.  
+
+
+* All examples

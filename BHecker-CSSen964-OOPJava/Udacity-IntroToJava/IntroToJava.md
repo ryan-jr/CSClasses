@@ -14,7 +14,7 @@
 
 // An example of the Day object and how to add days and get a result
 
-
+     
 public class Mariner4
 {
 	public static void main(String[] args)

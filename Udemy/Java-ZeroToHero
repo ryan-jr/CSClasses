@@ -1,0 +1,9 @@
+# Udemy Java Zero to Hero
+
+
+### Section 5 Lesson 31
+
+* Method overloading is naming the method the same (such as calculateTemp) but passing that method a different number of args/paramters.  
+
+* Changing the return type of an overloaded method does NOT change the signature
+

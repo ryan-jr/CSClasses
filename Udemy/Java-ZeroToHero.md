@@ -154,3 +154,33 @@ public class Car {
 * You can call a constructor within a constructor
 
 * Constructors HAVE TO HAVE THE SAME NAME AS THE CLASS, they can also be overloaded, and have different paramaters.  
+
+* With constructors we set the fields/member variables that we want given a set of paramaters.  
+
+* To call a constructor within a constructor we would do:
+
+```
+this(1, "ABC", 123);
+
+// If we call a constructor within a constructor it must be the first line of the constructor.  
+
+```
+
+* It is considered best practice to call the constructor directly on the field as opposed to calling the setter.  
+
+
+```Java
+
+// Inside a constructor for a bank Account:
+
+// Right
+this.acctNumber = number;
+
+// Wrong
+// While this is possible within the constructor, it is bad form
+setNumber(number);
+
+```
+
+* The general rule of thumb is you only call a constructor within a constructor, not a getter/setter
+

@@ -739,3 +739,38 @@ public class Main {
 
 
 ***
+
+
+### Lecture 6: Lists
+
+* Lists are linear collections like stacks/quues but are more flexible.  Adding/removing elements in lists a/n restricted by the collection structure (e.g. you d/n have to operate at one end or the other). 3 specific types of lists (ordered, unordered, indexed)
+
+* Ordered lists are orderd by some inherent charactersitic of the elements (alphabetic order, sequential order, etc...).  E.g. the elements themselvs determine where they are stored in the list.  
+
+* Unorder lists the order is not based on element characteristics, the user determines the order, and a new element can be added to the front, rear or inserted anywhere in the list.  
+
+* Indexed lists(Array lists), in an indexed lists elments are refed by their numeric position in the list, it's like an unordered list, but there is no inherent relationship among the elements and the user can determine the order AND every time the list changes the indexes are updated.  
+ 
+ * List ops include removing, checking status, first, last, contains, isEmpty, size.  Stacks/queues are predetermined, lists generally care about order/implementaiton.  
+ 
+ * Add is particular to an ordered list, add to front, add to rear and addafter are particular to an unordered list.  
+ 
+ * List operations, have java interfaces to define collection ops.  Recall that interfaces can be defined via inheritance, and we define common list ops in one interface and then derive 3 others from it that define the interfaces of the list types.  
+ 
+ * We could use lists to create a round robin tournament (best team against worst team, second best,against second worst, etc...), keep track of teams/individual team members, etc...
+ 
+ * Josephus problem: set of elements are in a circle, starting w/ a particular elemnt every ith element is removed, proccessing continues until only one element left.  Given the starting point and the remove count(i), which element is left?
+ 
+ * An array implementation of a list could follow similar strats to those used for a queue by fixing one end of the list index at 0 and shift it as needed when an element is added/removed, or a circular array could be used to avoid the shift at one end (However, there is no avoiding the shift if an element is added/removed in the middle)
+ 
+ * As with a stack anc queue we can implement a list collection w/ an underlying linked list
+ 
+ * Doubly linked lists has 2 refs in each node, one to the next element in th elist and one to the previous element which makes moving back/forth in a list easier and eliminates the need for a previous refrence in certain algos, but there is more overhead in managing such a list.  
+ 
+ * The remove method for the doubly linked list is more elegant than the singly linked list, but such elegance comes at the overhead cost with storing/managing additional links.  Singly is more explicit.
+   
+  * In both array and linked implementations most operations are simiar efficency (O(1)).  This is true EXCEPT when shifting or searching happens in whcih case they are O(n).  Depending on the situation the frequencey of need for particular ops may guide the use of one approach over another.  (Add/remove stuff on a regular basis = ArrayList, adding stuff constantly = linked list)
+  
+  * Java lists include the List interface, Vectors, ArrayList, and LinkedList.  
+  
+  ***

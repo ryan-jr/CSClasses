@@ -774,3 +774,35 @@ public class Main {
   * Java lists include the List interface, Vectors, ArrayList, and LinkedList.  
   
   ***
+
+  ### Chapter/Lecture 7: Recursion
+
+
+  * Explain recursion concepts, examine recursive methods/steps, define inf recursion/how to avoid it, explain when recursion should/should not b used, demonstrate using recursion to solve problems.  
+
+  * Recursion is a technique in which a method can call itself to solve a problem.  For example a recursive defition is one which uses the word/concept being defined to define itslef.  In some situations a recursive def can be an appropriate way to express a concpet.  
+
+  * All recrusive defs must have a non recursive part/base case otherwise it results in an infinite loop/recursion.  
+
+  * Mathematical functions can be defined recursively (think factorials), which are things like 1! = 1, or N! = N * (N - 1)!.  A factorial is defined in terms of another factorial until the base case is reached.  
+
+  * A method in Java can invoke itself and setup a recursive method.  The code of a recursive method must be structure to handle the recursive and base case.  Each call sets up a new execution enviro w/ new paramaters/local vars.  When the method complets control returns to the method that invoked it (usually another instance of itself). 
+
+ ```Java
+
+public int sum (int sum) {
+	
+	int result;
+	if (num == 1) {
+
+		result = 1;
+	} else {
+
+		result = num + sum(num - 1);
+	}
+	return result;
+}
+
+ ```
+
+* In terms of recrusion v iteration, we don't always have to use recursion.  E.g. normally we would not use recursion to figure out the sum of a factorial because the iterative solution is easier to understand.  EVERY recursive solution has a corresponding iterative solution.  RECURSION has the drawback of overhead of multiple method calls/invocations, BUT sometimes recursion solutions are more simple/elegan than iterative solutions

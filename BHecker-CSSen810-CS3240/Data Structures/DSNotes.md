@@ -806,3 +806,15 @@ public int sum (int sum) {
  ```
 
 * In terms of recrusion v iteration, we don't always have to use recursion.  E.g. normally we would not use recursion to figure out the sum of a factorial because the iterative solution is easier to understand.  EVERY recursive solution has a corresponding iterative solution.  RECURSION has the drawback of overhead of multiple method calls/invocations, BUT sometimes recursion solutions are more simple/elegan than iterative solutions
+
+* A method invoking itself is considered to be direct recursion, but a method could invoke another method, which invokes another, etc... until the original is invoked again(m1 calls m2, which calls m3, which calls m1 again) which is known as indirect recursion (this is often harder to debug/trace)
+
+* Recursion can be used for maze traversial by marking each location encoutered as 'visited' and attempt to find a pthat from the 'visited' location's unvisted neighbors.  Recursion would be used to keep track of the path(s) through the maze using a runtime stack with the base cases being a blocked move, or arrival at the end.  
+
+* The towers of Hanoi is a classic recursion problem as a puzzle made up of 3 vertical pegs and several disks that slide onto the pegs.  The disks are different sizes and placed on one peg w/ the largest disk on the bottom and increasingly smaller disks up to the top.  The goal is to move all of the disks from one peg to another following the rules: Only one disk can be moved at a time, a disk cannot be placed onto a smaller disk, and all disks must be on some peg.  
+
+* (Cont), the towers of Hanoi recursion would look like: To move a stack o N disks from the original peg to the destination peg: Move the topmost N-1 disks from the original peg to the extra peg, move the largest disk from the original peg to the destination peg, move the N-1 disks from the extra peg to the destination peg.  The base case occurs when a 'stack' contains one disk.  
+
+* (Cont), Note that the number of moves increases exponentially as the number of disks increase, the recurisve solution is straightforward/elegant to program with the iterative solution being more complex.  
+
+* When analyzing a loop, we determine the order of the loop body and multiply it by the number of times the loop is executed.  This is similar to recursive analysis, we determine the order of the method body and multiply it by the order of recurstion (order of recrusion is the number of times the recursive definition is followed).  For the Tower of Hanoi the size of the problem is the number of disks and the operation of interst is moving one disk, which means that except for the base case each recursive call result sin calling itself twice more (to solve a problem of N disks we make 2^n - 1 moves).  This means that the algo is O(2^n) (exponential complexity)

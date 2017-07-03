@@ -818,3 +818,66 @@ public int sum (int sum) {
 * (Cont), Note that the number of moves increases exponentially as the number of disks increase, the recurisve solution is straightforward/elegant to program with the iterative solution being more complex.  
 
 * When analyzing a loop, we determine the order of the loop body and multiply it by the number of times the loop is executed.  This is similar to recursive analysis, we determine the order of the method body and multiply it by the order of recurstion (order of recrusion is the number of times the recursive definition is followed).  For the Tower of Hanoi the size of the problem is the number of disks and the operation of interst is moving one disk, which means that except for the base case each recursive call result sin calling itself twice more (to solve a problem of N disks we make 2^n - 1 moves).  This means that the algo is O(2^n) (exponential complexity)
+
+
+***
+
+### Lecture/Chapter 8: Searching and Sorting
+
+* Searching is the process fo finding a target element among a group of items, or determining if it is not there.  This requires repeatedly comparing the target agains tthe cnadidates in the elements you're searching (the search pool).  An efficent sort performs no more comparisons than needed.  
+
+* For the comparable interface we want to define the algos such that they can search any set of objects which contains compareTo, which is designed to return an integer that specifies the relationship between two objects (obj1.compareTo(obj2)).  This call returns a number less than, equal to, or greather than 0 if obj1 is less than, equal to, or greater than obj1 respectively.  
+
+* To use the comparable interface objects must be comparable to each other, meaning they must be of the same class or descendants of the same ancestor.
+
+* Linear search examines each item in the search pool, one at a time, until either the target is found or nothing is left.  Linear search does not assume the items in the search pool are in any particular order, we just need to be able to examine each item in turn.  Straightforward, but inefficent.
+
+* If the search pool is sorted, then we can be more efficent than a lienar search.  A binary search eliminates large parts of the search pool w/ each comparison.  Instead of starting in the middle we start in the middle.  If the target i/n found we know that if it is in the pool at all, it is in one half or the other, we can then jump to the middle of that half and continue similarly.  
+
+*  Binary searches are often implemented recursively w/ each recursive call searching a smaller portion of th epool.  The base case is running out of viable candidates to search which means the target is not in the pool.  At any point there may be 2 middle values, in which case either could be used.  
+
+* In comparing search algos a linear search, on average, would examine n/2 elements before finding the target, and therefore a linear search is O(n).  The worst case for binary search is (log(2)n) comparisions.  Binary search is lograthmic with a time complexity of O(log(sub 2)n), however, the search pool must be sorted, and for arbitrarily large n's a binary search is must faster.  
+
+* Sorting is the process of arranging a group of items into adfined order based on particular criteria, Sequential sorts require about n^2 comparisiions to sort n elements, whereas logarithmic sorts typically require n(log(sub 2)n) comparisons.
+
+* Selection sort orders a list of values by repetively putting a particular value into its final position.  Selection sort, finds the smallest value in the list, switches it with the value in the 0th position, find the next smallest value in the list, switch it with the 1st position, repeat until all values are in their proper places.  
+
+* Insertion sort orders a list of values by repetitively insertign a particular value into a sorted subset of the list.  If a sorted sublist was of length one, we would insert the second item into the sorted sublist, shifting hte first item as needed, and repeat the previous steps neccessary for each subsequent element we want to insert.  Because of shifting this can cause more 'movement' (aka processing)
+
+* Bubble sort, orders a list by comparing neighboring elements and swapping positions as needed.  Bubble sort scans the list, exchanging adjacent elements if they are not in relative order, which bubbles the highest value to the top.  This repeats for the second highest value, until all elements have been placed in proper order.  
+
+* Insertion, slection, and bubble sort all use nested lopps and perform n^2(roughly) and are relativley inefficnet.  
+
+* Quick sort orders a list of valus by partitioning the lsit around one element, then sorting each partition.  Choose one element in the list to be a partition element, organize the elements so that all elements less than the partition are to the left, and all greater are to the right, and apply the quick sort algo to each half of the partition.  The choice of the partition element is arbitrary, for efficency it would be nice if the partition element divided the list roughly in half, the algo will work in any case however.  The work can best be thought of as 2 methods, quicksort which does the recursive algo and find Partition, which rearranges the elemnts into 2 partitions.  
+
+* Merge sort order a list of vals by recurisvely divindg the list in half until each sublist has one element, and then recombining things.  Merge sort divides the list into 2 roughly equal parts, recurisvely divides each part in half until a part contains only one element, merge the two parts into one sorted list, and contineu to merge parts as the recursion unfolds.  
+
+* Both quickSort and mergeSOrt use a recursive structure that takes log(sub2(n)) steps to decompose the original lists into lists of lenght one, at each step, both algos either compare or merge all elements, therefore both algos are O(n(log(n))).  
+
+* Radi sort uses queus to order a set of values.  A queue is create for each possible value of a postion/digit in the sort key.  E.g. if the sort key is a lowecase alphabetic string, there would be 26 queues, or if there was a decimal integer, there would be 10 queus corresponding to the digits 0 - 9.  Each pass throught he sort examines a particular position in the sort value, the elemnet is put on the que corresponding to that positions value, proccessing starts w/ the least signification portion (e.g. 1's or A's) to the most significant position.  This algo is easy to get wrong, but can be more efficent in some cases
+
+***
+
+### Lecture/Chapter 9: Trees
+
+* A tree is a non-linear structure defined by the concept that each node in the tree, other than the first/root node, has exactly one parent.  for trees, operations are dependent on the type of tree and its use.  Efficency is measured by how quickly it takes to find something, trees are another type of collection that is represented differently.  (e.g. simiarl to liked lists via nodes, but represnted differently/non-linear)
+
+* Common vocab: A node refres to a location in the tree where an element is stored, and a root: which refers to the node at the base of the tree or the one node in the tree that d/n have a parent.  
+
+* Each node of the tree points to the nodes that are directly beneath it in the tree (refered to as children).  A child of a child is a grandchild, and a child of a grandchild is called a great-grandchild.  A node that does not have at least one child is a leaf, and a node that is not the root and has at least one child is an internal node.  
+
+* Any node below another node and on a path from that node is a descendant of that node, any node above another node on a connecting path from the root to that node is an ancestor, all children of the same node ar siblings, a tree that limits each node to no more than n childeren is an n-ary tree.  The n-ary tree is usually done to limit search space and potentially create a balanced tree, where each node has the same number of children
+
+* Each node of the tree is at a specific level/depth within the tree, the level of a ndoe is the length of the path from the root to the node.  The path length is determined by counting the number of links that must be followed to get from the root to the node.  The root is considered as level 0, children level 1, grandchildren level 2, and so on.  
+
+* The height/order of a tree is the length of the longest path from the root to a leaf, thus the order of the tree from root A to leaf F is 3(b/c C is its own separate leaf), the path from root A to leaf C is 1
+
+* A tree is 'balanced' if all the leaves of the tree are roughly at the same depth.  
+
+* The concept of a complete tree is related to teh balance of a tree, and a tree is considered complete if it is ablanced and all the leaves at level H are on the left side of the tree.  While this is a seemingly arbitrary concept, there are implications for how the tree is stored in certain implementations.  
+
+* There are general startegies for implementing trees, with the most straighforward being a linked structure with each node being part of the TreeNode class(e.g. much like with LinearNode class for linked lists).  Each node would contain a pointer to the element to be stored in that node as well as pointer for each of the possible children of the node, and depending on the implementation it may also be useful to store a poitner in each node to its parent.  
+
+* For certain types of trees (specifically binary trees) a computational strategy can be used for string a tree using an array.  For any element stored in position n of the array, that element's left child would be stored in position ((2 * n) + 1) and the elements right child would be stored in position (2 * (n + 1 ))  
+
+* For trees implemented via arrays, this strategy can be managed in terms of capacity in much the same way that we did for other array-based collections, but there are some drawbacks, e.g. if the tree that we are storing is no relatively complete we may be wasitng large amounts of memory allocated to the array for portions of the tree that do not contain data.  

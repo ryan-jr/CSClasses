@@ -901,3 +901,5 @@ public int sum (int sum) {
 * (Basically bottom up) Postorder traversal is visiting the children, then the node starting w/ the root.  (Psuedo code) Traverse left child, traverse right child, visit node
 
 * Levelorder traversal(think of visiting a row in a database), is visiting all the nodes at each leve, one level at a time, starting with the root.  
+
+* Binary trees usually have a set of common operations, but in order to have an add operation we need to know how the tree will be used.  

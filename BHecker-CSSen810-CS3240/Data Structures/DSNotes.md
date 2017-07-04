@@ -880,4 +880,24 @@ public int sum (int sum) {
 
 * For certain types of trees (specifically binary trees) a computational strategy can be used for string a tree using an array.  For any element stored in position n of the array, that element's left child would be stored in position ((2 * n) + 1) and the elements right child would be stored in position (2 * (n + 1 ))  
 
-* For trees implemented via arrays, this strategy can be managed in terms of capacity in much the same way that we did for other array-based collections, but there are some drawbacks, e.g. if the tree that we are storing is no relatively complete we may be wasitng large amounts of memory allocated to the array for portions of the tree that do not contain data.  
+* For trees implemented via arrays, this strategy can be managed in terms of capacity in much the same way that we did for other array-based collections, but there are some drawbacks, e.g. if the tree that we are storing is not relatively complete we may be wasting large amounts of memory allocated to the array for portions of the tree that do not contain data.  
+
+* [This](http://imgur.com/BFYKb2o) is an array strategy for implementing trees.  Note how the root(element A, position 0 in the array) is 0, and then we move from left to right in the tree implementation, and how there is wasted space for positions 5 and 6.  Note how the tree is/can be represented/searched in a linear fashion, but how storing the tree in an array structure limits the data that can be held.  
+
+* A second possible array implementation of a ree is modeled after the way OS's manage memory.  Instead of assigning elements of the tree to array position by location in the tree, array postions are allocated contiguously on a first come, first serve basis.  Each eelemtn of the array will be a node class similar to the TreeNode class from earlier, but instead of storing obect ref vars as pointer to its children(and possibly parent), each node would store the array index of each child(and possibly its parent).  Such an approach allows elements to be stored contigusously so as to not waste space, but increases overhead(b/c if elements are deleted the remaining elements would have to be shifted for continuity)
+
+* [This](http://imgur.com/a/YlwNj) is a linked strategy for an array implementation of trees, notice how A connects to 2 and 1(it's children), and C has nothing(no children)
+
+* Trees are a useful/efficent way to implement other collections.  For instance with lists the general case for find operations is O(n), but if we implemented an ordered list using a balance binary search tree, a binary tree w/ the added proerty that the left child is always less than the parent which is always less thatn/equal to the right child, then we could improve the efficency of the find op to O(log(n)).  
+
+* (CONT) the height/order of a tree's search space will always be log(sub2(n)), where n is the number of elements in the tree, for any n-ary tree w/ n elements the tree's height will be log(sub(n)(N)).  Wit the added ordering property of a binary search tree, you are guaranteed to at worst search one path from the root to a leaf.   
+
+* Four basic algos for traversing a tree (preorder(preset), inorder, postorder, and levelorder(traversal))
+
+* Preorder traversal is accomplished by visiting each node, and its children starting w/ the root.  (Psuedocode): Visit node, traverse(left child), traverse (right child).  
+
+* Inorder traversal is accomplisehd by visiting the left child of the node, then the node, then any remaining child nodes starting w/ the root.  (Psuedocode): Traverse(left child), visit node, traverse(right child).  
+
+* (Basically bottom up) Postorder traversal is visiting the children, then the node starting w/ the root.  (Psuedo code) Traverse left child, traverse right child, visit node
+
+* Levelorder traversal(think of visiting a row in a database), is visiting all the nodes at each leve, one level at a time, starting with the root.  

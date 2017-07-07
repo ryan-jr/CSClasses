@@ -903,3 +903,9 @@ public int sum (int sum) {
 * Levelorder traversal(think of visiting a row in a database), is visiting all the nodes at each leve, one level at a time, starting with the root.  
 
 * Binary trees usually have a set of common operations, but in order to have an add operation we need to know how the tree will be used.  
+
+* Binary trees can be implemented with links, which is similar to linked lists which has links to all of the children. 
+
+* THe find method in a binary tree is a good example of recursion, which works well because the tree is a 'controlled' environment (e.g. you know the depth)
+
+* Binary tress can also be implemented via arrays 

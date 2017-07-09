@@ -909,3 +909,7 @@ public int sum (int sum) {
 * THe find method in a binary tree is a good example of recursion, which works well because the tree is a 'controlled' environment (e.g. you know the depth)
 
 * Binary tress can also be implemented via arrays 
+
+
+* Compilers actually take expressions and turn them into a tree and traverses it and puts it into an Abstract Syntax Tree, via parsing it and puting into tokens/lexameans and evaluates things via a prefix/postfix methodology.  
+

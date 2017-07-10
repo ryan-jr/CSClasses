@@ -913,3 +913,34 @@ public int sum (int sum) {
 
 * Compilers actually take expressions and turn them into a tree and traverses it and puts it into an Abstract Syntax Tree, via parsing it and puting into tokens/lexameans and evaluates things via a prefix/postfix methodology.  
 
+****
+
+Lecture 10: Binary Search Trees
+
+* Binary search trees are binary trees w/ the added property that for each node, the left child is less than the parent and less than or equal to the right child, this allows us to do more operations on the tree such as Add since we know where in the tree an element would go.  
+
+* Removing an element in a binary search tree requires finding the element to be removed, if the element is not a leaf, replace it with its inorder successor, return the element removed.  
+
+* There are 3 cases for the location of the minimum element in a binary search tree (and removing it).  1.  If the root has no left child then the root is the minimum element and the right child of the root becomes the new root.  2.  If the leftmost node of the tree si a leaf, then we se its parents left child refrence to null.  3.  If the leftmost node of the tree is an internal node, then we se its parents left child refrence to point to teh right child of the node to be removed. 
+
+* The assumption of balanced binary search trees is important it gives us the structure of the tree, and being unablanced would affect the order of the tree.  A BST that would be unbalanced is a degenerate binary tree, and would be far less efficent than a balanced tree (O(n) vs O(log(n))).  
+
+* There are multiple approaches to balancing such a tree  including brute force (inorder traversal of a fil and then using recursion to go back trhough the file/tree).  
+
+* A better solution would be using algos such as red black/AVL trees that maintain a persistant balance of the tree and use rotations to maintain that balance.  
+
+* A tree rotation is an operation on a binary tree that changes the structure WITHOUT interfering with the order of the elements
+
+* Remeber balance is when all the leaf nodes are at the same level.  Right rotation (24:30), left rotation (26:30).  RightLeft rotation(28:00), LeftRight(30:00)
+
+* AVL trees keep track of the difference in height between the right and left subtress for each node.  The difference in height is called the balance factor.  If the balance factor of any node is less than -1 or greater than 1, then the subtree needs to be rebalanced.  The balance factor of any node can only be changed through either insertion or deltion of nodes in the tree.  
+
+* If for instance the balance factor of a node is +2 it means the right subtree has a path that is too long, and if the balance factor of the right child is +1 then it means the long path is the right sub-tree of the right child and a left rotation of the right child around the original node will solve the imbalnce
+
+* Red/Black trees provide another alternative implementation of balanced binary search trees.  RBL trees are a balance BST where each node stores a color(usually stored as a boolean) with the following rules: THe root is black, all children of a red node are black, every path from the root to a leaf contains the same number of black nodes.  
+
+* Insertion into RBLTrees(39:00)
+
+* The concept is using colors to balance the trees (kind of like on/off bits) and if the colors are off then we rotate the tree.  
+
+*  

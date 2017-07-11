@@ -959,4 +959,16 @@ Lecture 10: Binary Search Trees
 
 * A cycle in a graph is a path where the last node is the same as the first node
 
-* An undirected graph is connected when there is a path between every pair of nodes, otherwise it is disconnected.  
+* An undirected graph is connected when there is a path between every pair of nodes, otherwise it is disconnected. 
+
+* A rooted tree is a tree where one of the nodes is designated as the root node (only one root in a tree).  A rooted tree has a top down structre w/ the root on top, followed by nodes, adjacent to it right below, followed by nodes adjacent to those and so on.
+
+* Nodes that are adjacent to and below x are considered children(with x being  the parent).  A node w/ no children is a leaf.  THe descendents of a node are itself, its children, their children etc..The ancestors of a node are: itself, its parent, its grandparent all the way up to the root
+
+* THe depth of a node is the number of edges from the root to that node.  The depth/height fo a rooted tree is the depth of the lowest leaf
+
+* A tree is a binary tree if every node has at most two children.  (0, 1, or 2 are all valid, 3 or more makes it NOT a binary tree).  We generally add left to right.  
+
+* A binary tree has 3 parts, data, pointer to left child, pointer to right child (basically think of a doubly linked list)
+
+* A binary search tree is a binary tree where every node holds a data value (a key).  For any node x all keys in the left subtree of x are less than/equal to x, for any node x all the keys in the right subtree of x are greater than the x key

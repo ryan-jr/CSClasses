@@ -943,4 +943,20 @@ Lecture 10: Binary Search Trees
 
 * The concept is using colors to balance the trees (kind of like on/off bits) and if the colors are off then we rotate the tree.  
 
-*  
+*  A set is a grouping of data, but a map is a key/value pair of data
+
+***
+
+### Lecture 11: Graphs and Trees
+
+* A graph is a finite set of nodes(verticies) with edges between nodes.  A verticie would be each node, and an edge would be the lines between each node.  When x,y is an edge we say x is adjacent to y
+
+* Nodes represent entities (people, places, things, etc...), edges represent relationships between x and y( x is bigger than y, x is faster than y)
+
+* If directions of the edges matter than we show the edge directions and it is a directed graph.  If relationships by the edges are edges if x is a sibling of y, then its an undirected graph
+
+* A path is a sequence of nodes such that there is an ege from each node to the next one in the sequence.
+
+* A cycle in a graph is a path where the last node is the same as the first node
+
+* An undirected graph is connected when there is a path between every pair of nodes, otherwise it is disconnected.  

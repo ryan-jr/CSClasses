@@ -972,3 +972,20 @@ Lecture 10: Binary Search Trees
 * A binary tree has 3 parts, data, pointer to left child, pointer to right child (basically think of a doubly linked list)
 
 * A binary search tree is a binary tree where every node holds a data value (a key).  For any node x all keys in the left subtree of x are less than/equal to x, for any node x all the keys in the right subtree of x are greater than the x key
+
+* Insertion into a BST is searching a BST, the position is to the L/R of child of some node x.  Create a new node and create the appropriate pointer field.  
+
+* Deletion from a BST is searching for b in tree T.  call X, the first node found to contain b.  If x is a leaf, remove x and set the appropriate pointer in the parent of x to null.  If X has only one child, y, remove x, and the parent of x becomes a direct parent of y.  If x has 2 children, go to the left subtree and find the largest node there, call it y, the node y can be found by tracing the rightmost path until the end (Note that y is either a leaf or has no right child).  Copy the data field of y onto the data field of x, and delete node y.  
+
+* One tree traversal technique is a heap 
+
+* Traversal is visiting every node at least once, and entails doing some processing of that node.  
+
+* 3 recursive techniques fro binary tree traversal, and in each of them the left subtree is traveled recursively, the right subtree is traveled recursively, and the root is visited.  What makes each of these different is the order of recursion/traversal.  
+
+* In preorder, the root is visitied before the subtree traversals (1.  Visit the root, traverse left subtree, traverse right subtree).  In inorder traversal, the root is visitied in-between left and right subtree traversal (1.  Traverse left subtree, visit the root, traverse right subtree).  In preorder traversal, the root is visited after the subtree traversals(1.  Visit the left subtree, 2.  Visit the right subtree 3.  Visit the root).  
+
+
+* 30:31
+
+

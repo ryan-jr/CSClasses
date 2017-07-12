@@ -1,0 +1,70 @@
+### Data Structures Midterm
+
+
+Name: _____________________________________  ID: ______________
+
+Answer all of the following questions using words. A sentence or two is sufficient. You do not need to write an essay for each question. Some answers might only be a few words. Each question is worth 1 point each.
+
+1. Compare and contrast data types, abstract data types, and data structures.
+
+Colletion: An object that gathers/organizes other objects and efines the ways in which those objects/elements can be accessed/managed.  
+Data Type: A group of values and the operations defined on those values
+Abstract Data Types: A data type whose valeus/operations are not interently defined within a programming langauge
+Data Structure: The collection of programming constructs used to implement a collection
+
+2.  List the collections in the Java Collections API.
+
+3.  Define the concept of abstraction and explain why it is important in software development.
+
+4.  What is the difference between the growth function of an algorithm and the order of that algorithm (Chapter 2)?
+
+5.  Why does speeding up the CPU not necessarily speed up the process by the same amount?
+
+6.  How do we use the growth function and an algorithm to determine its order (Chapter 2)?
+
+7.  How do we determine the complexity of a loop? (Chapter 2)
+
+8.  How do we determine the time complexity of a method call? (Chapter 2)
+
+9.  Write an algorithm for the add method that will add at the end of a Linked List instead of the beginning. What is the time complexity of this algorithm? (Pseudo-code or real source code) No complete program needed.
+
+10.  What is the difference between a queue and a stack?
+
+11.  What are the five basic operations on a queue?
+
+12.  Is it possible for the front and rear references in a linked implementation to be equal? Why or why not?
+
+13.  What is the difference between an indexed list, an ordered list, and an unordered list?
+
+14.  What are the basic methods of accessing an indexed list?
+15.  What is the difference between a singly and a double linked list? Why would one be used instead of the other?
+
+16.  What is an Iterator and why is it useful for Abstract Data Types (ADT)?
+
+17.  Why is an Iterator not appropriate for stacks and queues but is appropriate for lists?
+
+18.  What is recursion? How does it differ from looping or other forms of iteration?
+
+19.  When should recursion be avoided?
+
+20.  What is indirect recursion? What is infinite recursion?
+
+21.  When would a linear search be preferable to a logarithmic search?
+
+22.  What searching method requires that the list be sorted?
+
+23.  When would a sequential sort be preferable to a recursive sort?
+
+24.  What technique so these sort algorithms use? Briefly describe how the algorithm performs the sort: (insertion sort, bubble sort, selection sort, quick sort and merge sort)
+
+25.  How many queues would it take to use a radix sort to sort the names stored as all lowercase?
+
+26.  What is a tree? What is a node?
+
+27.  What attributes should be stored in a TreeNode class?
+
+28.  Which method of traversing a tree would result in a sorted list for a binary search tree?
+
+29.  What is the difference between a binary tree and a binary search tree?
+
+30.  Why are we able to specify addElement and removeElement operations for a binary search tree but we are unable to do so for a binary tree?

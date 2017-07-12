@@ -14,21 +14,32 @@ Data Structure: The collection of programming constructs used to implement a col
 
 2.  List the collections in the Java Collections API.
 
+List, Queue, Stack
+
 3.  Define the concept of abstraction and explain why it is important in software development.
+
+Abstraction is the concept of hiding the underlying implementation fo oprations/data storage in order to simplify the uses of a collection.  It is important for security reasons and to ensure compartmentalization of responsibilities.  
+
 
 4.  What is the difference between the growth function of an algorithm and the order of that algorithm (Chapter 2)?
 
+The growth function of an algo represents the relationship between the problem size and the time complexity of the solution.  The order of the algo is the time complexity.  As the size of teh problem grows the complexity of the algo approaches the asymptotic complexity.  
+
 5.  Why does speeding up the CPU not necessarily speed up the process by the same amount?
+
+Linear speedup only occurs if the algo has a constant (O(1)) order or a linear (O(n)) order, As the complexity of the algo grows, faster processors have less impact.  
 
 6.  How do we use the growth function and an algorithm to determine its order (Chapter 2)?
 
 7.  How do we determine the complexity of a loop? (Chapter 2)
+The complexity of a loop i found by multiplying the complexity of th ebody of the loop by how many times the loop will execute
 
 8.  How do we determine the time complexity of a method call? (Chapter 2)
 
 9.  Write an algorithm for the add method that will add at the end of a Linked List instead of the beginning. What is the time complexity of this algorithm? (Pseudo-code or real source code) No complete program needed.
 
 10.  What is the difference between a queue and a stack?
+A queue is FIFO, a stack is LIFO
 
 11.  What are the five basic operations on a queue?
 
@@ -37,6 +48,7 @@ Data Structure: The collection of programming constructs used to implement a col
 13.  What is the difference between an indexed list, an ordered list, and an unordered list?
 
 14.  What are the basic methods of accessing an indexed list?
+
 15.  What is the difference between a singly and a double linked list? Why would one be used instead of the other?
 
 16.  What is an Iterator and why is it useful for Abstract Data Types (ADT)?

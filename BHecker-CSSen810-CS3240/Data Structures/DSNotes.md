@@ -986,6 +986,44 @@ Lecture 10: Binary Search Trees
 * In preorder, the root is visitied before the subtree traversals (1.  Visit the root, traverse left subtree, traverse right subtree).  In inorder traversal, the root is visitied in-between left and right subtree traversal (1.  Traverse left subtree, visit the root, traverse right subtree).  In preorder traversal, the root is visited after the subtree traversals(1.  Visit the left subtree, 2.  Visit the right subtree 3.  Visit the root).  
 
 
-* 30:31
+* A fully Binary tree is a binary tree where all the leaves are on the same level and ever non-leaf has 2 children.  Partial tress are trees that are not balanced, don't have enough children, etc...  There are also, almost complete binary trees.
+
+* Canonical labeling of a full tree is labeing the nodes from 1 to n from top to bottom, left to right
+
+
+
+
+***
+
+### Lecture 12: Final exam review
+
+* What is a heap and its characteristics?
+
+* Know about binary trees, graphs, and tree data structures, and their different uses/configurations (complete, incomplete, levels, parent/child relationships etc...)
+
+* Know about abstract data types and what their characteristics/features are
+
+* Know the concept of the map data structure and how/why it is used
+
+* Know basic collections such as stacks, queues, trees, maps, hashes, dictionaries, etc...
+
+* Know about hashes/hash tables
+
+* Know about AVL trees and connected/unconnnected graphs(and cycles in graphs)
+
+* Know FIFO, LIFO, etc... concepts
+
+* Know the concepts of spanning in graphs/trees and sub-graphs.
+
+* Know priority queues, stacks/trees, aging queues, etc...
+
+* Know quicksort/the defintion of quicksort algo
+
+* Know what an AVL tree is and how to find the height of the children
+
+* Know what is meant by an 'indexed' data structure (array, list), and what data strucutres would be considered indexed strucutres
+
+* What is not a required condition for a binary search algo
+
 
 

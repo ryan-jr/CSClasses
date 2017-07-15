@@ -100,19 +100,36 @@ Linear search
 
 23.  When would a sequential sort be preferable to a recursive sort?
 
-24.  What technique so these sort algorithms use? Briefly describe how the algorithm performs the sort: (insertion sort, bubble sort, selection sort, quick sort and merge sort)
+24.  What technique do these sort algorithms use? Briefly describe how the algorithm performs the sort: (insertion sort, bubble sort, selection sort, quick sort and merge sort)
 
 25.  How many queues would it take to use a radix sort to sort the names stored as all lowercase?
 
+26 separate queues one for each letter
+
+
 26.  What is a tree? What is a node?
+
+A tree is a nonlinear structure defined by the concept that each node in the tree, other than the first/root node has exactly one parent.  A node is a location in the tree where an element is stored
 
 27.  What attributes should be stored in a TreeNode class?
 
+The treenode class should have a pointer to the element stored in that position as well as pointers to each of its children of the node, as well as pointers to the parent node.  
+
 28.  Which method of traversing a tree would result in a sorted list for a binary search tree?
 
+
+
+Inorder traversal would result in a sorted list in ascending order
+
 29.  What is the difference between a binary tree and a binary search tree?
+A binary search tree has an aditional ordering property thtat the left child of any node is less than the node, and the node is less than or equal to the right child.  
+
 
 30.  Why are we able to specify addElement and removeElement operations for a binary search tree but we are unable to do so for a binary tree?
+
+With the added ordering property of a binary search tree, we are
+now able to define what the state of the tree should be after an add
+or remove. We were unable to define that state for a binary tree.
 
 31.  What is a list and how does it differ from a stack/queue?
 

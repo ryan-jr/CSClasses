@@ -194,3 +194,24 @@ Class 2 - Lecture 4: System Model/The Analysis Stage
 * Entity relationship modeling is a DB or system of entities/relations, and is a tool for displaying/manipulating entity relation diagrams as well as tools for manipulating a DB/data storage system
 
 * The importance of mddeling is that it is a simplification of reality and allows us to better understand the system, and allows us to simplify/abstract things.  Models can be formal or informal, the more complex the proejct, the more valuable a formal model becomes.  The chocie of what models to create influcens hwo the problem is solved, and every model can have different percision levels.  The best models are connected to reality, and the best design docs use/implement multiple models.  
+
+***
+
+Class 4: Lecture 5: Entity Relationship Modeling
+
+* Technique for carrying out the conceputal/logical system design which has 3 basic notions of entities(like objects), attributes, and relationships
+
+* An entity is an object that can be identifed in the users work enviro and that users want to track
+
+* An entity is a thing/object in the real world w/in the application context and has a set of properties which uniquely identify it.  
+
+* An attribute describes a charactersitc of an entity (e.g. an employee that has the attributes of a name, extension, date of hire, etc...)
+
+* Relationships are associations between entities which express some r/w relationship.  Project and employee PARTICIAPATE in the employs relationship.  THe function that an entity plays in a relationship is called the entitys role
+
+* Sets of relationships if there are more than one relationship between entities, there can also be recursive relationship that define/indicate roles for clarity.  A relationship can also have descriptive attributes.  
+
+* Degree of relationships are the number of entitites participating in a relationship.  
+* Cardinalities are the nubmer of entities to which another entity can be associated via a relationship.  E.g. one to one, one to many, many to one, many to many
+
+(Stopped at 19:32)

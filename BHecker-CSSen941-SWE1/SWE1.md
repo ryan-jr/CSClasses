@@ -212,6 +212,23 @@ Class 4: Lecture 5: Entity Relationship Modeling
 * Sets of relationships if there are more than one relationship between entities, there can also be recursive relationship that define/indicate roles for clarity.  A relationship can also have descriptive attributes.  
 
 * Degree of relationships are the number of entitites participating in a relationship.  
-* Cardinalities are the nubmer of entities to which another entity can be associated via a relationship.  E.g. one to one, one to many, many to one, many to many
+* Cardinalities are the nubmer of entities to which another entity can be associated via a relationship.  E.g. one to one, one to many, many to one, many to many (e.g 32 seats to a bus would be one to many) (e.g. a person has 1 book, a person can onwn many cars but the cars only have one owner, a person can own many houses and a house can have multiple owners)
 
-(Stopped at 19:32)
+* Design issues are figuring out if something should be an entity or an attribute (e.g. location), and there is also an issue deciding eneity or relationship.  The general rule is that relationships for actions between entitites and whatever makes sense the the context of the application.  
+
+* Entity/Relationships design starts at identifying the entity sets, and then describing the entity sets w/ attributs, and then specifying relationships and cardinalities
+
+* A quick example is that every department w/in a company is in one division, and each divsision has multiple department that has multiple employees
+
+* AN example of a many to many relationship is that any one supplier might supply more than one part, and any one kind of part might be bought from a different number of suppliers
+
+* For the project implement a reqs doc
+
+### Class 4: Lecture 6: Data Flow Modeling
+
+* Data flow modeling is based on the notion that systems can be modeled as a set of interacting fuctions and uses data flow diagrams to graphically represent the external entities, prcesses, data flow, and data stores.  It is a graphical system model that shows all of the main requirments for an information system(inputs, outputs, proccesses, and data storage).  
+
+* 
+
+
+(Stopped at ~1:50)

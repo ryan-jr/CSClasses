@@ -228,7 +228,16 @@ Class 4: Lecture 5: Entity Relationship Modeling
 
 * Data flow modeling is based on the notion that systems can be modeled as a set of interacting fuctions and uses data flow diagrams to graphically represent the external entities, prcesses, data flow, and data stores.  It is a graphical system model that shows all of the main requirments for an information system(inputs, outputs, proccesses, and data storage).  
 
-* 
+* A terminator is an external entity w/ which the program system communicates, and is typically a person/group of people, and outside org or an agency.
 
+*  Data flow diagrams are usually used together with proccess in that data flows are used to connect processes indicating that data items are moving from one process to another
 
-(Stopped at ~1:50)
+* A data flow in a DFD should carry one type of information. Do not name a data flow too generic such as student, professor, administration.  A data flow can carry multiple items/composite items, and data flows should show directions  
+
+* Data flows do not answer procedural questions
+
+* A store describes a single or a set of data itmes(ex: a file, a DB, etc.. can be modeled as a store)
+
+* Stores are connected to processes by data flows A data flow to a stroe FROM a process means writing an update of the store.  A data flow from a store TO a proccess means a READ of the store by the process.
+
+*     

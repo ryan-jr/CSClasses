@@ -240,4 +240,60 @@ Class 4: Lecture 5: Entity Relationship Modeling
 
 * Stores are connected to processes by data flows A data flow to a stroe FROM a process means writing an update of the store.  A data flow from a store TO a proccess means a READ of the store by the process.
 
-*     
+***
+
+Class 5: Lecture 7: System Analysis Object Oriented Design
+
+* Object orieinted analysis/design uses visual reps similar to strucutred analysis, diagriming builds from ERD/DFD concepts, easy to learn and uses UML standards
+
+* OOD Methodology is a reaction to shortcomings in structured analysis which was a problem of larger products, and data/action are treated as equal partners
+
+* Object oriented analys with an object consisting of data(attributes, state, instance variables, fields, data memobers) and actions(methods/member fuctnons).  Objects are independent unit with conceptual/physical independence
+
+* There are multiple OO methods (much like Agile KANBAN, etc...), all are essentially equivalent, and most use UML diagrams
+
+* Three steps of OOA is 1.  Use case modeling(determine how various results are computed, this step is largely action oriented), 2.  Class/object modeling(determine classes/their attributes, this is data oritnted) 3.  Dynamic modeling(determine the actions performed by/or/to each class, this is action oritned).  The whole process is iterative
+
+* Use case modeling for OOA can be represented graphicall or as a series of steps
+
+* Class modeling is done by extracting classes/their attributes, represent them using an entity relationship diagram(ERD), deduce the classes from use cases/their scenarios, often there are multiple scenarios.  
+
+* There are 2 approaches to class modeling which are noun extraction and CRC cards (requires domain expertise)
+
+* Noun modeling is defining the problem/product in a single sentence.  Identify nouns is an informal strategy and create classes based off of ones that are similar, and generally the smallest number possible.  
+
+* Iteration is needed to mature/provide more specificity (this is why there are so many iterative models e.g. waterfall, agile, etc...).  
+
+* CRC cards stands for Class, Responsibility, COllaboration, which covers the name of the class, the functionality, and list of classes it invokes respectively.  The strength is that when acted out by team members CRC cards can highlight missing/incorrect itemls, but the weakness is that domain expertise is needed.  
+
+* Dynamic modling is creating a UML state diagram which covers state, event, and predicate are distributed over the state diagram
+
+### Class 5: Lecture 8: UML Diagrams
+
+* UML is Unified moldeling language which serves as a bridge between reqs specs and the implementaiton and privdes a means to spec/document the design of a sotware system and is sutied for OOP design.  
+
+* The notation for classes is having the name at the top, attributes in the middle, and operations/methods at the bottom.  Don't put anything in the diagram that doesn't need to be there.  The class notation is a description of a set of objects that share the same attributes, operations, relationships, and semantics.  
+
+* The interface notation is a circle that specifies a servce/class or component e.g. the externally visible behavior of the element.  
+
+* Interfaces are a set of rules for methds/things to be implemented
+
+* THe notation for collaboration/use cases.  A collaboration defineds an  interaction(e.g. a society of roles) and elements that work together to provide some cooperative behavior.  A use case is a description of a set of sequences of actions that a system performs that yeilds a result.  
+
+* An active class is a class whose objects own one or more process/threads and therefore can initiate control activity. 
+
+* A componenet is a replaceable part of a system that conforms to/provides the relaization of a set of interfaces(e.g. packages), where a node is a phyiscal element that exists at runtime and represents a computational resource (such as a server) 
+
+
+* An interaction is a behavior that comproises a set of messages exchanged among a set of objects witghin a particular context to accomplish a purpose.  A state maching is a behavior that specifies the sequence of staes an object/interaction goes through during its lifetime in response to events.  
+
+* A package is a mechanism for organizing elements into groups (different package than Java type etc...).  A note is a symbol for rendering constraints/notes to elements.  
+
+* A dependency is something representing a relationship between two things (an association)
+
+* A generalization is a specalization/generalization relationship is which objects of the specialized elment(child) are subsitiutable for objects of the generalized element(parent).  A relization is a semantic relationship between classifiers wherein one clasifier spcifies a contract that another classifier carries out.  
+
+* A diagram is the graphical representation of a set of elements usually rendered as a connected graph of verticies(things and relationships).  Class diagrams show a set of classes, interfaces and collaborations w/ their relatinships.  Objects show objects and their relationships.  Basically different diagrams emphasize different things (Interactions show how things are related, sequence diagrams emphasize time ordering, ocllaborationd diagrams emphasize organizition)
+
+
+***

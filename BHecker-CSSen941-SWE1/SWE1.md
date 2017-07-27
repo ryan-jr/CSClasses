@@ -297,3 +297,39 @@ Class 5: Lecture 7: System Analysis Object Oriented Design
 
 
 ***
+
+
+### Class 6: Lecture 9: OOD 2
+
+* It's best to think LT and think of what would happen if your software were to be in use 5 years from now
+
+* Reququirements give you a what, hte design gives you the how
+
+* For Object design we begin to implement design ideas specificying responsibilites, attributes, operations, etc...
+
+* One method to identify classes is noun identification, and then identify classes based off of that and any neccessary relationships and operations/methods (e.g. a book is an item in a library )
+
+* THere is no single correct design, because druing the design proccess, elements may be hidden for simplication, elements may be missing, the model may not be consistent
+
+* There are many levels of abstraction, high levels of abstraction show the overall syste, where low levels of abstraction are needed fro implementation.  Model entire systems at the same level of abstraction, but show diagrams w/ different level sof detail
+
+* Scenarios, use cases, actors, and roles are another from of diagrams/explanation/narrative
+
+* For the development cycle use cases are important, intuitive, but are often hard to translate into class models, but can help validate the design
+
+### Class 6: Lecture 10: UML vs. ERD
+
+* UML in not a replacement for Entity relationship diagramming.  UML does have its drawbacks b/c they can be more cluttered/less easily understood
+
+* An entity relationship dagram can be mapped to a UML diagram.  
+
+* UML notation includes the role that each object in the class is assuming in the relationship expressed w/ a noun on each side, but ERD diagrams do not
+
+* In UML you can show a recursive relationship far easier, and in UMLs there are comments, UML usually shows more directionality than ERDs 
+
+* Generalizations are more flexible in UML than they are in ERDs.  THere need not be only one generalization structure from a given class, you can have multiple generalizations in the same class.  (A generalization is basically a label/classification that is able to be connected/related to something else)
+
+* UML allows for the creation of multiple relationship types beyond entity/class relationships including interaction, sequence, collaboration, activity, and state chart diagrams
+
+* IN UML a component si a distributable piece of implementaion of a system including code (source, binary, or execuable).  This analgous term in an ERD is a subsystem, which is a grouping of elements that specifies what part of a system should do.  In other words a component can be thought of as an implementation of a subsystem.  
+

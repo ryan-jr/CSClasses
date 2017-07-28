@@ -333,3 +333,40 @@ Class 5: Lecture 7: System Analysis Object Oriented Design
 
 * IN UML a component si a distributable piece of implementaion of a system including code (source, binary, or execuable).  This analgous term in an ERD is a subsystem, which is a grouping of elements that specifies what part of a system should do.  In other words a component can be thought of as an implementation of a subsystem.  
 
+### Class 7: Lecture 11: Software Testing
+
+* THe objective of testing is to executue a program to find errors, create a good test case that has a high probability of finding errors, and a good test finds a new error
+
+* The two types of testing are black box and white box
+
+* Black box testing is testing to make sure that the functionality is working correctly, given the correct inputs, what can you do from the outside to change the system, what is the output.  
+
+* White box testing hcecks the code, tests the codntionals, loops, branches etc... The status is examined in terms of expected values.  It will often test important data strucutres/paths.  Black box testing is easier/more straightforward
+
+* Unit testing is generally all white box, Integration testing is done by prorammers as they integrate code into the code base and is usually white box and some black box, Functional/System testing is usually done by an external group and is usually black box, Acceptance testing is usually done by the customer/rep and is certainly black box
+
+* The testing process is usually designing test cases, executing the cases, preparing the test data, loading the test data, running the program w/ test data, testing the results, compare results to test cases, and report the test cases
+
+* Planning a black box test case is putting and ID of the test case, describing the input conditions, describign the expected results, recording the actual results (this is known as the testing grid)
+
+* The inputs and expected results must be specific (not just 'a passing grade', but define the percentage/what you want)
+
+* There can also be failure test cases, (e.g. what happens if you're expecting an integer but they give you a character), or if the customer takes an illogical path, mandator fields aren't entered?, the program is suddenly stopped/interrupted?
+
+* In testing, one input should lead to one output (one to one testing) 
+
+* Verification/Validation, Verification asks if the product is being built correctly (E.g. the software should conform to spec), validation is asking if the correct product is being built(e.g. do what the user needs)
+
+### Class 7: Lecture 13: Software design/THe design spec doc 
+
+* NOTE: LECTURE 12 WAS SKIPPED BECUASE IT WAS THE MIDTERM REVIEW
+
+* Design is a problem solving process whose objective is to find and describe a way to implment functioal requriemnts while respecting the constraints imposed by non fucntional requirments and while adhering to general principles (A design doc is a blueprint)
+
+* A component is a piece of software/hardware that has a clear role, can be isolated/replaced, and are often designed to be reused, others may be specualized
+
+* Modules are a component that is defined at the programming language level (e.g. packages)
+
+* A system is a logical entity that has a set of definable responsiblities/objectives that consists of hardware/software, Systems can have specs whech are implemented by a collection of components, A system continues even if its components are changed/replaced, The goal of requrements analysis is to determine the responsiblities of a system.  A subsystem is a part of a larger system
+
+* Top down design 

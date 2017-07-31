@@ -369,4 +369,4 @@ Class 5: Lecture 7: System Analysis Object Oriented Design
 
 * A system is a logical entity that has a set of definable responsiblities/objectives that consists of hardware/software, Systems can have specs whech are implemented by a collection of components, A system continues even if its components are changed/replaced, The goal of requrements analysis is to determine the responsiblities of a system.  A sub system is a part of a larger system
 
-* Top down design     
+* Top down de sign     

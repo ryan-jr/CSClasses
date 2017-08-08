@@ -369,4 +369,33 @@ Class 5: Lecture 7: System Analysis Object Oriented Design
 
 * A system is a logical entity that has a set of definable responsiblities/objectives that consists of hardware/software, Systems can have specs whech are implemented by a collection of components, A system continues even if its components are changed/replaced, The goal of requrements analysis is to determine the responsiblities of a system.  A sub system is a part of a larger system
 
-* Top down de sign     
+* Top down design is the first design at a high level structure that gruadually works down to detailed decision about low level constructs including data items and algos that will be used
+
+* Bottom up design makes descion about resuable low level utils, then decide how everything will be put together for high level constructs.  Usually a mix of top down and bottom up approaches are used fro good structure, and reusability
+
+* THere are different aspects of design including architecture design which focuses on how subsystems etc... will be connected/interact/interface, class design focuses on classes, UI design, algo design, protocol design, etc...
+
+* Overall goals of good design include reusability, on time development, reliability, maintainablity, etc...
+
+* Divide and conquer is another method in which multiple people work on separate smaller parts, and allows for specalization, ease of understanding, and easy replacability.  
+
+* One of the goals of design is to increas cohesion where possible for ease of understanding, replaciblity, and flexibility.  
+
+* Reduce coupling where possible, Coupling is where there are interdependencies between one module and another, where interdependencies exist changes in one place require changes elsewhere, and a network of interdependencies makes it hard to see how components work together.  
+
+* Layers should also be used, pretty much just another form of hierarchy.  
+
+* Keep abstraction as high as possible, this allows you to hide/defer detail consideration and reduce complexity.  This hides information and allows you to understand the neccessary parts of a system without having to know uncessary details.  
+
+
+* Increase reusability where possible, design the system to contain hooks(e.g. a place where new components/parts can be plugged in)
+
+* Design for flexibility, anticipate changes that a design might go through in the future.  Don't hard code things, and leave options open especially for those who have to modify the system later.  
+
+* Anticipate obsolecence, plan for changes in teh tech/environment so software can keep running and be easily changed.  Avoid using early releases of technology, avoid using software libraries that are specific to particular enviros, avoid using undocumented features/little used features, avoid using software/special hardware from companies that are less likely to provide long term support
+
+* Design for portability, have the software run on as many platforms as possible
+
+* Design defensively, never trust how others will try to use a component you are designing.  Handle all cases where other code might attempt to use your component inappropriately.  Check that all inputs are valid.  
+
+* 

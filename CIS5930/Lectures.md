@@ -211,3 +211,11 @@ I think it makes us more fragile without proper safeguards or fallbacks.  As tec
 
 
 ```
+
+***
+
+### Lecture 3: Code Auditing
+
+* Freeing a chunk of memory is the reversoe of malloc/memory allocation
+
+* We want to target metadata of second chunks, since we can't write backward..  The good way to do this is to have an exploit that uses a string up to the point of metadata, and then writes into the next chunk metadata that points to an overwrite/unlink

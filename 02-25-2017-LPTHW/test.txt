@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Feb 26 12:11:53 2017
+
+@author: rjr
+"""
+
+This is only a test\n
+
+Again only a test"\n"
+
+Python was made by GVR who is BDFL
+
+We are now learning via LPTHW

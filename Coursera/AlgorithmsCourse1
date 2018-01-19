@@ -1,0 +1,81 @@
+# Coursera Data Structures and Algorithms Specialization
+
+## Course 1: Algorithmic Toolbox
+
+
+### Week 1:
+
+* How to download/upload a problem set:
+
+```
+Step 1: Download the problem (usually.py in this case)
+Step 2: Rename the file to the name of the problem set (because the problem originally downloads with a long checksum and then the problem name)
+Step 3: Solve the problem/verify it works with the test inputs
+Step 4: Upload the problem and verify it passes
+```
+
+* Some common dangers include integer/input overflow, and timing out.  In order to avoid this there are some testing techniques you should try to implement first:
+
+```
+1.  Manual tests/input
+2.  A test for each type of answer (largest answer, smallest answer, answer does not exist, etc...)
+3.  Test for time/memory limit
+4.  Test for corner cases (largest inputs allowed, statements that break the input, different input types, etc...)
+```
+
+* If the above does not work, then you can try stress testing:
+
+```
+1.  Have a solution you want to test (usually a new/improved solution)
+2.  A different, possibly burte force solution that outputs the obviously correct solution to the problem
+3.  A test generator
+4.  An infinite loop in which:
+	A.  A new test is generated
+	B.  Results are compared
+	C.  If the results differ then output the differing answers as well as the input/test that was run
+	D.  Stop the program
+	E.  Else the program loops again
+```
+
+* Key Points:
+
+```
+It is very important to write programs that work correctly on all the allowed inputs.
+Testing is essential to writing correct programs.
+First test on a few small manual tests, then test for each type of answer, then test on large test cases for time limit and memory limit, then test on corner cases.
+After that, apply stress testing to ensure your program works - it will almost always lead to correct solution. You can do it before your first attempt to submit your solution - and will often get it right from the first attempt!
+Stress testing consists of implementing the intended solution, another simple possible slow solution, a test generator and an infinite loop which generates tests and compares answers of the two solutions.
+Always try to find the smallest test cases on which your solution fails.
+Try different regions of the test space when generating cases for stress testing.
+```
+
+### Week 2
+
+* The class focuses on algorithms that may not neccessarily be intuitive.  
+
+```
+Fibbonacci numbers
+
+F(n - 1) + F(n - 2)
+
+
+With a standard recursive algorithm, the stack becomes unneccessarily large after a while and the algo can actually be more efficent.  
+
+The more efficent algo would be something similar to creating an array that sets the inital condiations of [0, 1], and then for i from 2 to n F(i) is F[i - 1] + F[i - 2] and then return F(n)
+
+```
+
+```
+Greatest Common Divisor
+```
+
+THe straightforward algo is to use a while/for loop to constantly increase and find the GCD of X and Y
+
+A much more efficient method is the Euclidean algorithm, which uses a division algorithm such as long division in combination with the observation that the gcd of two numbers also divides their difference. To compute gcd(48,18), divide 48 by 18 to get a quotient of 2 and a remainder of 12. Then divide 18 by 12 to get a quotient of 1 and a remainder of 6. Then divide 12 by 6 to get a remainder of 0, which means that 6 is the gcd. Note that we ignored the quotient in each step except to notice when the remainder reached 0, signalling that we had arrived at the answer.
+
+```
+
+
+Computing Runtimes
+```
+

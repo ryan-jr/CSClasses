@@ -1,0 +1,373 @@
+# Sam's 24 hour Java
+
+## Chapter 6: Using strings to communicate
+
+* Characters must be surrounded by single quotes, strings by double quotes.  
+
+* Strings are a collection of characters
+
+* Each are used respectively:
+
+```Java
+
+char quitKey = 'z';
+String name = "Joe";
+
+```
+
+* The basic way to display a string is using System.out.println("STRING GOES HERE");
+
+* We can also use System.out.print(); to display things, the difference is that print line adds a newline after the string.  
+
+* We use special characters by denoting them with a \ before the character we want to insert.  (', *, \, t, b, r, f, n).  (single quotation, backslash, tab, backspace, return, formfeed, newline)
+
+* We concatonate variables with the + in strings.  
+
+* We can also add to strings/addition with +=
+
+* We compare two strings with equals like so:
+
+```Java
+
+String favorite = "piano";
+String guess = "ukulele";
+
+System.out.println("My favorite instrument is " + guess + " ?");
+System.out.println("Answer: " + favorite.equals(guess));	// false
+System.out.println("Length: " + guess.length());	// 7
+
+```
+
+* Notice how we use FIRSTVAR.equals(SECONDVAR)
+
+* Favorite in this instance stores the favorite variable, while guess holds the guess.  
+
+* The fourth line in the above program will return a true or a false depending on what the equals method returns
+
+* To determine string length we can use the .length() method
+
+* We can also change the case of something with .toUpperCase() or .toLowerCase()
+
+* We can use the indexOf() method to see if one string is inside another, if not, the method will return -1.  If a string IS found, the method will return the starting position of the found string.  
+
+* REMEMBER: STRINGS ARE IMUTABLE IN JAVA.  THIS MEANS THAT IN ORDER TO USE/DO THE UPPER/LOWERCASE METHODS YOU NEED TO STORE THE STRING IN A NEW VARIABLE AND RETURN IT.  
+
+* Major points: Creating Strings, Strings are immutable, adding them (+ and +=), including variables in a string, and String length()/equals().  
+
+
+***
+
+## Chapter 7: Conditionals
+
+* If statements are the most straightforward conditional:
+
+```Java
+
+
+// Run BLOCK IF CONDITION == true
+if (CONDITION) {
+	
+	BLOCK
+}
+
+```
+
+* We can also do IF statements in a single line with e.g. you don't need a block( {BLOCK} ):
+
+```Java
+
+if (account <= 0) System.out.println("Hello world");
+
+```
+
+* If/Else/else if statements are the next way to design conditional branching
+
+```Java
+
+if (account <= 0) {
+	
+	System.out.println("Hello world");
+
+} else if (account <= 10) {
+	
+	System.out.println("Hey there");
+} else {
+	
+	System.out.println("Things worked");
+}
+
+```
+
+* Switch statements are the other way to go in Java, BUT case statements can ONLY evaluate BASED ON A SINGLE INTEGER, VALUE, or STRING STATEMENT, whereas if/else statments can evaulate based on 
+a range of values (hence <, >, <=, ?>=, !=)
+
+```Java
+
+switch(grade) {
+	
+	case: 'A':
+		System.out.println("Congrats on the A");
+		break;
+	case: 'B':
+		System.out.println("Good job on the B");
+		break;
+	case: 'C':
+		System.out.println("OK job on the C");
+		break;
+	case: 'D':
+		System.out.println("About that D....");
+	default:
+		System.out.println("Ouch, that F");
+
+}
+
+```
+
+* Note that if the default switch/case is not set, and none of the conditions match, nothing will happen.  
+
+* Another way to go for straightforward conditionals is the ternary operator
+
+```
+(CONDITION) ? RESULT_IF_TRUE : RESULT_IF_FALSE;
+```
+
+```Java
+
+int numberOfEnemeies = (skillLevel > 5) ? 10 : 5;
+
+
+## Chapter 8: Loops
+
+* The 3 types of loops are for loops, do/while loops, and while loops.  Generally we only use while loops and for loops
+
+* A for loop looks like so: 
+
+```Java
+
+// Displays every number form 0 to 999 divisible by 12
+for (int dex = 0; dex < 1000; dex++) {
+	
+	if (dex % 12 == 0) {
+
+		System.out.println("#: " + dex);
+	}
+}
+
+```
+
+* Just like with if statements for loops do not require a block/brackets if the loop only contains a single statmeent.  
+
+```Java
+
+for (int p = 0; p < 500; p++) 
+	System.out.println("Hello world");
+
+```
+
+* While loops are more straigtforward:
+
+```Java
+
+while (lives > 0) {
+	
+	// Block statements go here
+}
+```
+
+* While the while loop condition is true (in this case, while 'lives' is greater than 0)
+
+```Java
+
+int beg = 0;
+int end = 6;
+
+while (beg < end) {
+	
+	System.out.println("Hello world");
+	beg++;
+}
+
+```
+
+* For a do/while loop, the conditional goes at the bottom, which means that the loop will always run AT LEAST once. 
+
+```Java
+
+do {
+	
+	// Block statements go here
+
+} while (lives > 0);
+
+```
+
+```Java
+
+int beg = 0;
+int end = 6;
+
+do {
+	
+	System.out.println("I will not Xerox things");
+	beg++;
+
+} while (beg < end);
+
+
+* It is possible to exit a loop other than the normal way of the condition turning false, we can also use break statements for certain conditions
+
+```Java
+
+int index = 0;
+while (index <= 1000) {
+	
+	index += 5;
+	if (index == 400) {
+		System.out.println("Index is 400");
+		break;
+	}
+
+}
+
+```
+
+* We can also use continue to skip over certain conditions:
+
+```Java
+int index = 0;
+while (index <= 1000) {
+	
+	index += 5;
+	if (index == 400) {
+		continue;
+		System.out.println("Index is 400");
+		
+	}
+
+}
+
+
+
+```
+
+* The above loop will never display the text, because it will skip over it as per the continue statement.  
+
+* The break statment can also be used for loops that are DESIGNED to run forever:
+
+```Java
+
+while (true) {
+	
+	if (quitKeyPressed == true) {
+
+		break;
+	}
+}
+
+```
+
+* You can also name loops in Java, which is especially useful for when you have nested loops and you want to break out of BOTH of the loops.  
+
+* To name a loop you have to put the name of the loop on the line before the beginning of the loop and follow it with a colon :
+
+```Java
+
+namedLoop:
+while (true) {
+	
+	BLOCK
+	for (i = 0; i < 100; i++) {
+
+		if (i == 75) {
+
+			break namedLoop;
+		}
+
+		BLOCK
+
+	}
+}
+```
+
+* Note that the break statement for the named loop does NOT include the colon.
+
+* We can also make for loops far more complex if we so choose by initializing multiple variables in the statment.
+
+```Java
+int i, j;
+
+for (i = 0, j = 0; i * j < 1000; i++, j += 2) {
+		
+	System.out.println(i + " * " + j + " = " + (i * j)); 
+}
+
+
+```
+
+* Sections of a for loop can also be empty, for instance if the intialization variables have already been declared elsewhere
+
+```Java
+
+int x = 0;
+int y = 100;
+
+for ( ; x < y; x++) {
+	
+	BLOCK
+}
+
+```
+
+* SIDE NOTE/ADVANCED STUFF: We can use a for/each loop to loop over values in an array:
+
+```Java
+
+char alphabet[] = new char[25];
+
+for (char letter : alphabet) {
+	
+	System.out.println(letter);
+}
+
+
+```
+
+* The above can be read as: "for each letter in the array alphabet print out (the) letter".
+
+
+## Chapter 9: Storing information with Arrays
+
+* Arrays are groups of related variables that share the same type, any type of information that can be stored as a variable can be stored in an array.
+
+* Arrays are created by declaring the type of information the array will hold and then the array name:
+
+```Java
+
+int[] numbers;	// This does not initialize the variables
+String[] names;
+boolean[] trueOrFalse;
+
+```
+
+* The above creates the arrays, but the arrays do not store values in them, in order to save values we can use the new keyword.  When we use the new keyword we have to specify how many elements we want the array to hold(in this case 250 elements).  
+
+
+```Java
+
+int[] numbers = new int[250]	// This does initialize the array with a random memory address(if you just print the array)
+								// If you print each value in the array, you'll find that it initializes each index with a 0
+
+```
+
+* Generally when we initialize an array, an array of strings will initialize each index with null, integer arrays will initialize each element with 0, char arrays will have '\0', boolean arrays will have false.  
+
+* For arrays that we know what we want in them, we can set up their initial values at the same time we create them:
+
+```Java
+
+String[] names = {"Joe", "Sally", "Doug", "Alice", "Bob"};
+
+```
+
+
+
